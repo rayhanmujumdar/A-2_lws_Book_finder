@@ -2,7 +2,7 @@
 
 **Date: 17/1/24**
 
-![project Analysis](https://prod-files-secure.s3.us-west-2.amazonaws.com/6b556a7a-0921-47cb-9ba3-44bf140bacc2/4687241f-096b-4eeb-aec7-35911679649a/Untitled.png)
+![Book finder project analysis](BookFinder_project_analysis.png)
 
 ### Data structure for Book items:
 
