@@ -7,11 +7,11 @@ import SortBox from "./components/SortBox";
 import BookLists from "./components/layouts/BookLists";
 import Main from "./components/layouts/Main";
 import SearchBoard from "./components/layouts/SearchBoard";
-import { books } from "./data/books";
+import { booksData } from "./data/books";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [bookLists, setBookLists] = useState([...books]);
+  const [bookLists, setBookLists] = useState([...booksData]);
   // This is a SortHandler function
   const handleSortBooks = (sortText) => {
     let sortAbleBooks = [];
@@ -51,7 +51,7 @@ function App() {
         );
         break;
       default:
-        setBookLists(books);
+        setBookLists(bookLists);
         break;
     }
   };
