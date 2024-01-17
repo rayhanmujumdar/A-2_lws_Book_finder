@@ -1,8 +1,6 @@
 import starIcon from "../assets/star.svg";
 export default function BookCard({ book, onFavorite }) {
   const { id, name, author, price, star, img, isFavorite } = book;
-  const favColor = isFavorite ? "DC2954" : "1C4336";
-  let className = `bg-[#${favColor}]/[14%] text-[#${favColor}] hover:bg-[#${favColor}]/[24%]`;
   return (
     <div className="flex flex-col justify-between space-y-3 min-h-full">
       <div className="flex items-center justify-center rounded-md border border-[#324251]/30 bg-white p-4 h-80">
@@ -46,7 +44,11 @@ export default function BookCard({ book, onFavorite }) {
         </button>
         <button
           onClick={() => onFavorite(id)}
-          className={`flex min-w-[132px] items-center justify-center gap-1 rounded-md py-1.5 transition-all  lg:py-1.5 ${className}`}
+          className={`flex min-w-[132px] items-center justify-center gap-1 rounded-md py-1.5 transition-all  lg:py-1.5 ${
+            isFavorite
+              ? "bg-[#DC2954]/[14%] text-[#DC2954] hover:bg-[#DC2954]/[24%]"
+              : "bg-[#1C4336]/[14%] text-[#1C4336] hover:bg-[#1C4336]/[24%]"
+          }`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
