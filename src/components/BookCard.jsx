@@ -1,6 +1,7 @@
 import starIcon from "../assets/star.svg";
 export default function BookCard({ book, onFavorite }) {
-  const { id, name, author, price, star, img, isFavorite } = book;
+  const { id, name, author, price, star, img, isFavorite, published } = book;
+  const publishYear = Number(published.split(",")[1]);
   return (
     <div className="flex flex-col justify-between space-y-3 min-h-full">
       <div className="flex items-center justify-center rounded-md border border-[#324251]/30 bg-white p-4 h-80">
@@ -8,7 +9,9 @@ export default function BookCard({ book, onFavorite }) {
       </div>
 
       <div className="space-y-3">
-        <h4 className="text-lg font-bold lg:text-xl">{name}</h4>
+        <h4 className="text-lg font-bold lg:text-xl">
+          {name} ({publishYear})
+        </h4>
         <p className="text-xs lg:text-sm">
           By : <span>{author}</span>
         </p>
